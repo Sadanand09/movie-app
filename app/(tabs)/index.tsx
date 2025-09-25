@@ -55,9 +55,7 @@ export default function Index() {
               </Text>
               <FlatList
                 data={movies}
-                renderItem={({ item }) => (
-                  <MovieCard {...item} />
-                )}
+                renderItem={({ item }) => <MovieCard {...item} />}
                 keyExtractor={(item) => item.id.toString()}
                 numColumns={3}
                 columnWrapperStyle={{
@@ -66,8 +64,8 @@ export default function Index() {
                   paddingRight: 5,
                   marginBottom: 10,
                 }}
-                    className="mt-2 pb-32"
-                    scrollEnabled={false}
+                className="mt-2 pb-32"
+                scrollEnabled={false}
               />
             </>
           </View>
